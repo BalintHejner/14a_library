@@ -22,4 +22,6 @@ Route::apiResource('books', BookController::class);
 Route::apiResource('categories', CategoryController::class);
 Route::get('/categories/{category}/books', [CategoryController::class, 'booksOfCategory']);
 
+Route::get('/books/{id}/readers', [BookController::class, 'readersOfBook']);
+
 Route::get('/authors/{author}/books', [AuthorController::class, 'booksOfAuthor']);
